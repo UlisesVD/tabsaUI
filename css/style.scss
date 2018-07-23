@@ -149,8 +149,54 @@ textarea {
     }
 }
 
+.price{
+    height:300px;
+    background-size:cover;
+    background-position:center;
+    padding:0px;
+    overflow:hidden;
+    &:hover{
+        .screen{
+            top:0%;
+        }
+    }
+    .screen{
+        position:relative;
+        top:-100%;
+        background-color:rgba(0,0,0,0.8);
+        height:100%;
+        width:100%;
+        transition: top 0.5s;
+    }
+}
 
+#menu-title{
+    width:300px;
+    z-index:1;
+    top:50%;
+    left:calc(50% - 150px);
+    top:calc(50% - 2.5em);
+}
 
+#gallery{
+    width:100%;
+    overflow-x:hidden;
+    .inner{
+        white-space:nowrap;
+        position:relative;
+        left:0%;
+        transition: left 2s;
+    }
+    .image{
+        margin-right:-4px;
+        display:inline-block;
+        height:100vh;
+        width:100%;
+        background-size:cover;
+        background-position:center;
+        background-repeat:no-repeat;
+    }
+}
 
 
 
@@ -164,6 +210,9 @@ textarea {
    ========================================================================== */
 .medium{
     font-size:1.5em;
+}
+.subtitle{
+    font-size:2.5em;
 }
 .open-s{
     font-family: 'Open Sans', sans-serif;
@@ -184,6 +233,9 @@ textarea {
 }
 .black{
     background-color:#222;
+}
+.white{
+    background-color:white;
 }
 .top{
     top:1em;

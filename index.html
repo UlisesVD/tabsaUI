@@ -10,6 +10,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 <meta content="width=device-width, initial-scale=1" name="viewport">
+<meta content="2" data-name="image-counter">
 <script src="js/vendor/modernizr-3.6.0.min.js"></script>
 </head>
 <body>
@@ -28,9 +29,9 @@ para una mejor experiencia
 <source src="videos/webm/bb.webm" typ="video/webm">
 </video>
 </div>
-<div class="row full-height middle-xs center-xs relative up">
+<div class="row full-height middle-xs center-xs relative up" id="home">
 <div class="col-xs-12">
-<div class="box white-text">
+<div class="box white-text" style="margin-top:12%">
 <img src="/img/tabsa.png" width="30%">
 <h1 class="open-s title no-margin">Mensajeria y paqueteria mundial</h1>
 <p id="is_open">
@@ -58,7 +59,7 @@ Abierto ahora
 </li>
 </ul>
 </nav>
-<div class="absolute white-text full-width black large-padding" id="description">
+<div class="absolute white-text full-width black large-padding" id="description" style="z-index:20;">
 <div class="row middle-xs center-xs">
 <div class="col-xs-7 col-sm-6 white-text medium">
 ¡Hacemos que las cosas sucedan!
@@ -88,9 +89,105 @@ Abierto ahora
 </div>
 </div>
 </div>
+}
 </div>
-<div class="full-height"></div>
+<div class="text-center relative" id="precios">
+<div class="absolute white" id="menu-title">
+<h2 class="open-s title">Costos</h2>
+</div>
+<div class="row">
+<div class="col-md-4 col-lg-3 col-sm-6 col-xs-12 price" style="background-image:url(/img/producto.jpg)">
+<div class="screen">
+<div class="row middle-xs full-height">
+<div class="col-xs-12 white-text">
+<h4 class="open-s subtitle">Cualquier articulo como
+TV, Celulares etc.</h4>
+<p class="no-margin"></p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-lg-3 col-sm-6 col-xs-12 price" style="background-image:url(/img/normal.jpg)">
+<div class="screen">
+<div class="row middle-xs full-height">
+<div class="col-xs-12 white-text">
+<h4 class="open-s subtitle">Normal</h4>
+<p class="no-margin">100</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-lg-3 col-sm-6 col-xs-12 price" style="background-image:url(/img/rapido.jpg)">
+<div class="screen">
+<div class="row middle-xs full-height">
+<div class="col-xs-12 white-text">
+<h4 class="open-s subtitle">Rapido</h4>
+<p class="no-margin">200</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-lg-3 col-sm-6 col-xs-12 price" style="background-image:url(/img/expres.jpg)">
+<div class="screen">
+<div class="row middle-xs full-height">
+<div class="col-xs-12 white-text">
+<h4 class="open-s subtitle">Express</h4>
+<p class="no-margin">300</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-lg-3 col-sm-6 col-xs-12 price" style="background-image:url(/img/documento.jpg)">
+<div class="screen">
+<div class="row middle-xs full-height">
+<div class="col-xs-12 white-text">
+<h4 class="open-s subtitle">Archivos importantes como
+Impresiones, folios etc.</h4>
+<p class="no-margin"></p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-lg-3 col-sm-6 col-xs-12 price" style="background-image:url(/img/normal.jpg)">
+<div class="screen">
+<div class="row middle-xs full-height">
+<div class="col-xs-12 white-text">
+<h4 class="open-s subtitle">Normal</h4>
+<p class="no-margin">100</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-lg-3 col-sm-6 col-xs-12 price" style="background-image:url(/img/rapido.jpg)">
+<div class="screen">
+<div class="row middle-xs full-height">
+<div class="col-xs-12 white-text">
+<h4 class="open-s subtitle">Rapido</h4>
+<p class="no-margin">200</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-lg-3 col-sm-6 col-xs-12 price" style="background-image:url(/img/expres.jpg)">
+<div class="screen">
+<div class="row middle-xs full-height">
+<div class="col-xs-12 white-text">
+<h4 class="open-s subtitle">Express</h4>
+<p class="no-margin">300</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="gallery">
+<div class="inner">
+<div class="image" style="background-image:url(/img/slider/app.jpg)"></div>
+<div class="image" style="background-image:url(/img/slider/t1.jpg)"></div>
+<div class="image" style="background-image:url(/img/slider/t.jpg)"></div>
+</div>
+</div>
 <script src="/js/vendor/jquery-3.3.1.min.js"></script>
-<script src="/dist/main.js"></script>
+<script src="/dist/main.js">}</script>
 </body>
 </html>

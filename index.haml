@@ -1,3 +1,4 @@
+-gallery_image = ["app.jpg", "t1.jpg", "t.jpg"]
 !!!5
 %html{class:"no-js", lang:"es"}
 	%head
@@ -10,6 +11,7 @@
 		%link{rel:"stylesheet",href:"https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.css"}
 		%link{rel:"stylesheet",href:"css/style.css"}
 		%meta{name:"viewport",content:"width=device-width, initial-scale=1"}
+		%meta{:"data-name" => "image-counter",content:"#{gallery_image.size-1}"}
 		%script{src:"js/vendor/modernizr-3.6.0.min.js"}
 
 	%body
@@ -26,9 +28,9 @@
 			%video{autoplay:true,loop:true,width:"1280",height:"720",poster:"/videos/img/bb.jpg"}
 				%source{src:"videos/mp4/bb.mp4",typ:"video/mp4"}
 				%source{src:"videos/webm/bb.webm",typ:"video/webm"}
-		.row.full-height.middle-xs.center-xs.relative.up
+		.row.full-height.middle-xs.center-xs.relative.up#home
 			.col-xs-12
-				.box.white-text
+				.box.white-text{style:"margin-top:12%"}
 					%img{src:"/img/tabsa.png", width:"30%"}
 					%h1.open-s.title.no-margin Mensajeria y paqueteria mundial
 					%p#is_open 
@@ -41,7 +43,7 @@
 						%li
 							%a{}= item
 
-			.absolute.white-text.full-width.black.large-padding#description
+			.absolute.white-text.full-width.black.large-padding#description{style:"z-index:20;"}
 				.row.middle-xs.center-xs
 					.col-xs-7.col-sm-6.white-text.medium
 						¡Hacemos que las cosas sucedan!
@@ -52,9 +54,28 @@
 									-menu.each do |item|
 										%li
 											%a{}= item
+			}
 
-		.full-height
-		
+		.text-center.relative#precios
+			.absolute.white#menu-title
+				%h2.open-s.title Costos
+			-precios = [{name:"Cualquier articulo como\nTV, Celulares etc.", image:"img/producto.jpg", pricing:""},{name:"Normal", image:"img/normal.jpg", pricing:"100"},{name:"Rapido", image:"img/rapido.jpg", pricing:"200"},{name:"Express", image:"img/expres.jpg", pricing:"300"},{name:"Archivos importantes como\nImpresiones, folios etc.", image:"img/documento.jpg", pricing:""},{name:"Normal", image:"img/normal.jpg", pricing:"100"},{name:"Rapido", image:"img/rapido.jpg", pricing:"200"},{name:"Express", image:"img/expres.jpg", pricing:"300"}]
+
+			.row
+				-precios.each do |photo|
+					.col-md-4.col-lg-3.col-sm-6.col-xs-12.price{style:"background-image:url(/#{photo[:image]})"}
+						.screen
+							.row.middle-xs.full-height
+								.col-xs-12.white-text
+									%h4.open-s.subtitle= photo[:name]
+									%p.no-margin= photo[:pricing]
+		#gallery
+			.inner
+				-gallery_image.each do |image|
+					.image{style:"background-image:url(/img/slider/#{image})"}
+					
+
+
 
 		%script{src:"/js/vendor/jquery-3.3.1.min.js"}
-		%script{src:"/dist/main.js"} 
+		%script{src:"/dist/main.js"} 				}
