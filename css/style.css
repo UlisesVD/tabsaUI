@@ -113,6 +113,12 @@ textarea {
     .navigation li a:hover {
       text-decoration: none; }
 
+#description.absolute {
+  bottom: 0px; }
+
+#description.fixed {
+  top: 0px; }
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -171,7 +177,7 @@ textarea {
  * Hide visually and from screen readers
  */
 .hidden {
-  display: none !important; }
+  display: none; }
 
 /*
  * Hide only visually, but have it available for screen readers:

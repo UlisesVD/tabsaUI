@@ -140,7 +140,14 @@ textarea {
     }
 }
 
-
+#description{
+    &.absolute{
+        bottom:0px;
+    }
+    &.fixed{
+        top:0px;
+    }
+}
 
 
 
@@ -193,6 +200,7 @@ textarea {
 .absolute{
     position:absolute;
 }
+
 .bottom{
     bottom:0px;
 }
@@ -213,7 +221,7 @@ textarea {
  */
 
 .hidden {
-    display: none !important;
+    display: none;
 }
 
 /*
