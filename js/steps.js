@@ -55,7 +55,7 @@
 		$next_step.find(".input").focus()
 
 		//cordinar circles
-		const posision = ($next_step.index(".step") * 2) + 1
+		const posision = ($next_step.index(".step")) + 1
 
 		const $circle = $(".path-step:nth-child("+posision+")")
 		focus_circle($circle)

@@ -216,7 +216,7 @@ textarea {
     border-radius:50%;
     background-color:#a2a2a2;
     margin-top:2em;
-    display:inline-block;
+    display:block;
     opacity:0.4s;
     transition: all 4s;
     cursor:pointer;
@@ -264,6 +264,10 @@ textarea {
 
 #map{
     height:500px;
+}
+
+#menu-opener{
+    display:none;
 }
 
 
@@ -427,6 +431,64 @@ textarea {
 
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (max-height: 600px) {
+    #contact, .container .card{
+        margin-top:-15%;
+    }
+
+    #map{
+        height:200px;
+    }
+
+    #location{
+        margin-top:-15px;
+    }
+
+}
+@media only screen and (max-width: 960px) {
+    #navigation{
+        display:none !important;
+    }
+    #menu-opener{
+        display:block;
+    }
+
+    .path-step{
+        display:inline-block;
+        margin-right:1em;
+    }
+
+    #responsible-nav{
+        ul{
+            position:absolute;
+            width:100%;
+            font-size:1.5em;
+            top:80px;
+            background-color:#222;
+            left:0px;
+            text-align:center;
+            max-height:0px;
+            overflow:hidden;
+            transition: all 0.4s;
+            &.active{
+                max-height:80vh;
+            }
+            li{
+                display:block;
+                margin-top:1em;
+                padding:10px 15px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 500px) {
+    #responsible-nav{
+        ul{
+            top:90px;
+        }    
+    }
 }
 
 @media print,

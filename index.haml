@@ -36,13 +36,13 @@
 					%h1.open-s.title.no-margin Mensajeria y paqueteria mundial
 					%p.top-space#is_open 
 						%i.glyphicon.glyphicon-time
-						Abierto ahora
+						%span.text Abierto ahora
 			%nav.fixed.top.right.navigation.white-text#navigation
-				-menu = ["Inicio", "Costos", "Galeria", "Petición de Servicio", "Como llegar" ]
+				-menu = [{title:"Inicio",link:"#home"}, {title:"Costos",link:"#precios"}, {title:"Galeria",link:"#gallery"}, {title:"Petición de Servicio",link:"#contact"}, {title:"Como llegar",link:"#location"} ]
 				%ul.list-inline
 					-menu.each do |item|
 						%li
-							%a{}= item
+							%a{href:item[:link]}= item[:title]
 
 			.absolute.white-text.full-width.black.large-padding#description{style:"z-index:20;"}
 				.row.middle-xs.center-xs
@@ -50,11 +50,12 @@
 						¡Hacemos que las cosas sucedan!
 					.col-xs.hidden#sticky-navigation
 						.box
-							.nav.text-right.navigation
+							.nav.text-right.navigation#responsible-nav
+								%i.glyphicon.glyphicon-menu-hamburger.white-text.subtitle.glyphicon-remove#menu-opener
 								%ul.list-inline
 									-menu.each do |item|
 										%li
-											%a{}= item
+											%a.menu-link{href:item[:link]}= item[:title]
 			}
 
 		.text-center.relative#precios
@@ -88,15 +89,14 @@
 						%p.text-center.medium#info-contacto Precione enter para llenar el campo y enviar
 						%form{action:"https://formspree.io/uli_vra@hotmail.com",method:"POST",id:"contact-form",class:"step-form"}
 							.row.center-xs
-								.col-xs-2.col-md-1.text-center
+								.col-xs-12.col-sm-2.col-md-1.first-sm
 									.box
 										-3.times do |i|
 											-if i == 0
 												.path-step.active
 											-else
 												.path-step
-											%br
-								.col-xs-5
+								.col-xs-12.col-sm-3.first-xs
 									.box
 										%fieldset.step.active
 											%input{type:"email",name:"email",placeholder:"ejemplo@gmail.com",class:"input",required:true}

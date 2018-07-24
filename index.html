@@ -37,26 +37,26 @@ para una mejor experiencia
 <h1 class="open-s title no-margin">Mensajeria y paqueteria mundial</h1>
 <p class="top-space" id="is_open">
 <i class="glyphicon glyphicon-time"></i>
-Abierto ahora
+<span class="text">Abierto ahora</span>
 </p>
 </div>
 </div>
 <nav class="fixed top right navigation white-text" id="navigation">
 <ul class="list-inline">
 <li>
-<a>Inicio</a>
+<a href="#home">Inicio</a>
 </li>
 <li>
-<a>Costos</a>
+<a href="#precios">Costos</a>
 </li>
 <li>
-<a>Galeria</a>
+<a href="#gallery">Galeria</a>
 </li>
 <li>
-<a>Petición de Servicio</a>
+<a href="#contact">Petición de Servicio</a>
 </li>
 <li>
-<a>Como llegar</a>
+<a href="#location">Como llegar</a>
 </li>
 </ul>
 </nav>
@@ -67,22 +67,23 @@ Abierto ahora
 </div>
 <div class="col-xs hidden" id="sticky-navigation">
 <div class="box">
-<div class="nav text-right navigation">
+<div class="nav text-right navigation" id="responsible-nav">
+<i class="glyphicon glyphicon-menu-hamburger white-text subtitle glyphicon-remove" id="menu-opener"></i>
 <ul class="list-inline">
 <li>
-<a>Inicio</a>
+<a class="menu-link" href="#home">Inicio</a>
 </li>
 <li>
-<a>Costos</a>
+<a class="menu-link" href="#precios">Costos</a>
 </li>
 <li>
-<a>Galeria</a>
+<a class="menu-link" href="#gallery">Galeria</a>
 </li>
 <li>
-<a>Petición de Servicio</a>
+<a class="menu-link" href="#contact">Petición de Servicio</a>
 </li>
 <li>
-<a>Como llegar</a>
+<a class="menu-link" href="#location">Como llegar</a>
 </li>
 </ul>
 </div>
@@ -203,17 +204,14 @@ Impresiones, folios etc.</h4>
 <p class="text-center medium" id="info-contacto">Precione enter para llenar el campo y enviar</p>
 <form action="https://formspree.io/uli_vra@hotmail.com" class="step-form" id="contact-form" method="POST">
 <div class="row center-xs">
-<div class="col-xs-2 col-md-1 text-center">
+<div class="col-xs-12 col-sm-2 col-md-1 first-sm">
 <div class="box">
 <div class="path-step active"></div>
-<br>
 <div class="path-step"></div>
-<br>
 <div class="path-step"></div>
-<br>
 </div>
 </div>
-<div class="col-xs-5">
+<div class="col-xs-12 col-sm-3 first-xs">
 <div class="box">
 <fieldset class="step active">
 <input class="input" name="email" placeholder="ejemplo@gmail.com" required type="email">
