@@ -6,6 +6,7 @@
 		%title Tabsa Express
 		%meta{name:"description",content:"Realiza tus envios de una forma rapida y segura"}
 		%link{href:"https://fonts.googleapis.com/css?family=Open+Sans",rel:"stylesheet"}
+		%link{rel:"stylesheet",href:"css/animate.css"}
 		%link{rel:"stylesheet",href:"css/normalize.css"}
 		%link{rel:"stylesheet",href:"css/bootstrap.css"}		
 		%link{rel:"stylesheet",href:"https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.css"}
@@ -37,7 +38,7 @@
 						%i.glyphicon.glyphicon-time
 						Abierto ahora
 			%nav.fixed.top.right.navigation.white-text#navigation
-				-menu = ["Inicio", "Costos", "Galeria", "Contacto", "Como llegar" ]
+				-menu = ["Inicio", "Costos", "Galeria", "Petición de Servicio", "Como llegar" ]
 				%ul.list-inline
 					-menu.each do |item|
 						%li
@@ -82,7 +83,7 @@
 			.row.middle-xs.full-height.top-space
 				.col-xs-12
 					.box.center-xs
-						%button.btn.btn-primary.top-space-large.medium{type:"button"} Realizar petición
+						%button.btn.btn-primary.top-space-large.medium{type:"button",class:"animated infinite pulse delay-2s"} Realizar petición
 						%p.top-space.medium Si tiene alguna duda contactanos.
 						%p.text-center.medium#info-contacto Precione enter para llenar el campo y enviar
 						%form{action:"https://formspree.io/uli_vra@hotmail.com",method:"POST",id:"contact-form",class:"step-form"}
@@ -103,8 +104,13 @@
 											%input{type:"text",name:"name",placeholder:"Coloca tu nombre",class:"input",required:true}
 										%fieldset.step
 											%textarea{name:"body",placeholder:"Comentario",class:"input",required:true}
+		#location
+			#map
+			#message.black.large-padding.white-text.text-center.medium localizacion de sucursal
 
 
+		%script{src:"https://maps.googleapis.com/maps/api/js?key=AIzaSyAH_mteAb8TrptsQr9B31yjrntIpehE4bo"}
+		%script{src:"/dist/maps.js"} 	
 		%script{src:"/js/vendor/jquery-3.3.1.min.js"}
 		%script{src:"/dist/main.js"} 	
 		%script{src:"/dist/form_object.js"}

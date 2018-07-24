@@ -5,6 +5,7 @@
 <title>Tabsa Express</title>
 <meta content="Realiza tus envios de una forma rapida y segura" name="description">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="css/animate.css" rel="stylesheet">
 <link href="css/normalize.css" rel="stylesheet">
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.css" rel="stylesheet">
@@ -52,7 +53,7 @@ Abierto ahora
 <a>Galeria</a>
 </li>
 <li>
-<a>Contacto</a>
+<a>Petición de Servicio</a>
 </li>
 <li>
 <a>Como llegar</a>
@@ -78,7 +79,7 @@ Abierto ahora
 <a>Galeria</a>
 </li>
 <li>
-<a>Contacto</a>
+<a>Petición de Servicio</a>
 </li>
 <li>
 <a>Como llegar</a>
@@ -197,7 +198,7 @@ Impresiones, folios etc.</h4>
 <div class="row middle-xs full-height top-space">
 <div class="col-xs-12">
 <div class="box center-xs">
-<button class="btn btn-primary top-space-large medium" type="button">Realizar petición</button>
+<button class="animated btn btn-primary delay-2s infinite medium pulse top-space-large" type="button">Realizar petición</button>
 <p class="top-space medium">Si tiene alguna duda contactanos.</p>
 <p class="text-center medium" id="info-contacto">Precione enter para llenar el campo y enviar</p>
 <form action="https://formspree.io/uli_vra@hotmail.com" class="step-form" id="contact-form" method="POST">
@@ -231,6 +232,12 @@ Impresiones, folios etc.</h4>
 </div>
 </div>
 </div>
+<div id="location">
+<div id="map"></div>
+<div class="black large-padding white-text text-center medium" id="message">localizacion de sucursal</div>
+</div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAH_mteAb8TrptsQr9B31yjrntIpehE4bo"></script>
+<script src="/dist/maps.js"></script>
 <script src="/js/vendor/jquery-3.3.1.min.js"></script>
 <script src="/dist/main.js"></script>
 <script src="/dist/form_object.js"></script>
