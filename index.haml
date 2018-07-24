@@ -33,7 +33,7 @@
 				.box.white-text{style:"margin-top:12%"}
 					%img{src:"/img/tabsa.png", width:"30%"}
 					%h1.open-s.title.no-margin Mensajeria y paqueteria mundial
-					%p#is_open 
+					%p.top-space#is_open 
 						%i.glyphicon.glyphicon-time
 						Abierto ahora
 			%nav.fixed.top.right.navigation.white-text#navigation
@@ -73,9 +73,39 @@
 			.inner
 				-gallery_image.each do |image|
 					.image{style:"background-image:url(/img/slider/#{image})"}
-					
+		.container
+			.card.white.black-text.text-center.relative
+				%h3.medium Quiénes somos
+				%p.top-space SOMOS UNA EMPRESA Enfocada en atender al mercado de Familias Migrantes Mexicanas en Estados Unidos de Norteamérica. Por medio del desarrollo de Centros de Servicio Migrantes, los cuales sirven servicios y productos como: Mensajería y Paquetería de México hacia Estados Unidos y Viceversa; Transferencias Electrónicas de Dinero de Estados Unidos hacia México y Resto de Latinoamérica, Venta de Productos de Telefonía, Check Cashing en USA y Muchos más Productos.
 
+		.top-space.black.white-text.full-height#contact
+			.row.middle-xs.full-height.top-space
+				.col-xs-12
+					.box.center-xs
+						%button.btn.btn-primary.top-space-large.medium{type:"button"} Realizar petición
+						%p.top-space.medium Si tiene alguna duda contactanos.
+						%p.text-center.medium#info-contacto Precione enter para llenar el campo y enviar
+						%form{action:"https://formspree.io/uli_vra@hotmail.com",method:"POST",id:"contact-form",class:"step-form"}
+							.row.center-xs
+								.col-xs-2.col-md-1.text-center
+									.box
+										-3.times do |i|
+											-if i == 0
+												.path-step.active
+											-else
+												.path-step
+											%br
+								.col-xs-5
+									.box
+										%fieldset.step.active
+											%input{type:"email",name:"email",placeholder:"ejemplo@gmail.com",class:"input",required:true}
+										%fieldset.step
+											%input{type:"text",name:"name",placeholder:"Coloca tu nombre",class:"input",required:true}
+										%fieldset.step
+											%textarea{name:"body",placeholder:"Comentario",class:"input",required:true}
 
 
 		%script{src:"/js/vendor/jquery-3.3.1.min.js"}
-		%script{src:"/dist/main.js"} 				}
+		%script{src:"/dist/main.js"} 	
+		%script{src:"/dist/form_object.js"}
+		%script{src:"/dist/steps.js"} 	

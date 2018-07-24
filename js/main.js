@@ -3,6 +3,14 @@
 	let currentP = $("[data-name='image-counter']").attr("content")
 
 	const imageCounter = 2
+	const email = "uli_vra@hotmail.com"
+
+	$("#contact-form").on("submit",function(ev){
+		ev.preventDefault()
+		sendForm($(this))
+		return false
+	})
+
 	$("#sticky-navigation").removeClass("hidden")
 	$("#sticky-navigation").slideUp(0)
 
@@ -45,6 +53,7 @@
 		$("#navigation").slideDown("fast")
 		$("#sticky-navigation").slideUp("fast")
 	}
+
 
 	function isInBottom(){
 		const $description = $("#description")
